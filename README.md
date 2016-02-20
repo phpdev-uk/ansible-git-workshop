@@ -1,3 +1,22 @@
 # Ansible and Git workshop
 
 Related files for the Ansible and Git workshop run by Paul Waring.
+
+You can test whether you meet the requirements for this workshop by running
+the following commands:
+
+```
+git clone https://github.com/pwaring/ansible-git-workshop.git
+cd ansible-git-workshop/test
+vagrant up
+ansible testing -m ping
+```
+
+You should see the following output:
+
+```
+vagrant | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+```
