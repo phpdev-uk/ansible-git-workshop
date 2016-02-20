@@ -1,6 +1,7 @@
 # Ansible and Git workshop
 
-Related files for the Ansible and Git workshop run by Paul Waring.
+Related files for the Ansible and Git workshop run by
+[Paul Waring](http://www.pwaring.com).
 
 You can test whether you meet the requirements for this workshop by running
 the following commands:
