@@ -1,0 +1,27 @@
+# Web server functionality
+- name: Web server playbook
+  hosts: vagrant
+  sudo: True
+
+  vars_files:
+    - config.yml
+
+  vars:
+    install_packages:
+      - apache2
+      - libapache2-mod-php5
+      - php5-mysql
+
+  tasks:
+    - name: Install Apache
+      with_items: "{{ install_packages }}"
+      apt:
+        name: "{{ item }}"
+        update_cache: "{{ apt_update_cache }}"
+        cache_valid_time: "{{ apt_cache_valid_time }}"
+
+    - name: Start Apache
+      service:
+        name: apache2
+        state: started
+
