@@ -12,6 +12,11 @@
       ufw:
         state: enabled
 
+    - name: enable incoming ssh
+      ufw:
+        rule: allow
+        to_port: ssh
+
     - name: allow all outgoing traffic
       ufw:
         direction: outgoing
@@ -26,5 +31,3 @@
     - name: reload ufw
       ufw:
         state: reloaded
-
-      
