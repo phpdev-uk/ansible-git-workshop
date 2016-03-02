@@ -1,0 +1,30 @@
+# Security-related functionality, e.g. firewall installation and setup
+- name: Security playbook
+  hosts: vagrant
+  sudo: True
+
+  tasks:
+    - name: Install UFW
+      apt:
+        name: ufw
+
+    - name: Start UFW
+      ufw:
+        state: enabled
+
+    - name: allow all outgoing traffic
+      ufw:
+        direction: outgoing
+        policy: allow
+
+    - name: deny all incoming traffic
+      ufw:
+        direction: incoming
+        policy: deny
+        log: yes
+
+    - name: reload ufw
+      ufw:
+        state: reloaded
+
+      
