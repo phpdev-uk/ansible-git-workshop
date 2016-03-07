@@ -21,3 +21,9 @@ vagrant | SUCCESS => {
     "ping": "pong"
 }
 ```
+
+Make sure you destroy the VM afterwards by running:
+
+```
+vagrant destroy -f
+```
