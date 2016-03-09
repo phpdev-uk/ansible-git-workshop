@@ -23,7 +23,8 @@ vagrant | SUCCESS => {
 }
 ```
 
-Make sure you destroy the VM afterwards by running:
+Make sure you destroy the VM afterwards by running the following command in
+the `test` directory (same location as `Vagrantfile`):
 
 ```
 vagrant destroy -f
