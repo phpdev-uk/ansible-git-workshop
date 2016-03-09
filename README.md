@@ -10,6 +10,7 @@ the following commands:
 git clone https://github.com/pwaring/ansible-git-workshop.git
 cd ansible-git-workshop/test
 vagrant up
+cd ansible
 ansible testing -m ping
 ```
 
